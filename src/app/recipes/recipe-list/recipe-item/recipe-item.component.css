@@ -1,0 +1,13 @@
+list-group-item-heading, list-group-item-text {
+    color: #9ea9b4;
+}
+
+a.list-group-item.active,
+ .list-group-item.active:focus,
+ .list-group-item.active:hover {
+    z-index: 2;
+    color: #00bac7;
+    background-color:hwb(184deg 4% 65% / 75%);
+    border-color: hwb(184deg 4% 65% / 75%);
+}
+

@@ -1,0 +1,40 @@
+.navbar-brand{
+    color: white;
+    font-weight: 700;
+}
+
+.navbar-custom{
+    color:#9ea9b4;
+}
+
+.navbar-custom :hover{
+    color:#00bac7 ;
+    font-weight: 500;
+}
+
+.navbar-default .navbar-nav>.active>a{
+    color: #00bac7;
+    background-color:hwb(184deg 4% 65% / 75%);
+}
+
+/* .navbar-default .navbar-nav a :hover{
+    background-color: #0e2238;
+} */
+
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:focus {
+    color:#00bac7;
+    background-color:hwb(184deg 4% 65% / 75%);
+}
+
+.dropdown-menu{
+    background-color:#0e2238;
+}
+
+.dropdown-menu a{
+    color: #9ea9b4;
+}
+
+ul.dropdown-menu :hover{
+    background-color: hwb(184deg 4% 65% / 75%);
+}
