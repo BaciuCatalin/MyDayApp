@@ -1,4 +1,5 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
+// import { Subject } from 'rxjs';
 import { Ingredient } from '../shared/ingredients.model';
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
 import { Recipe } from './recipes.model';
@@ -6,7 +7,7 @@ import { Recipe } from './recipes.model';
   providedIn: 'root'
 })
 export class RecipeService {
-  recipeSelected = new EventEmitter<Recipe>();
+  // recipeSelected = new Subject<Recipe>();
 
  private recipes: Recipe[] = [
     new Recipe( 'Pizza', 'Delicios','https://www.pizzaibiza.ro/upload/shop/products/pizza-ibiza-specialitatea-casei@2x.jpg',

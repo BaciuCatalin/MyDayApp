@@ -10,6 +10,7 @@ button.btn.btn-primary.dropdown-toggle:hover {
 ul.dropdown-menu :hover {
     background-color: hwb(184deg 4% 65% / 75%);
 }
+
 ul.dropdown-menu {
     background-color:#0e2238 ;
 }
@@ -17,7 +18,7 @@ ul.dropdown-menu {
 .open>.dropdown-toggle.btn-primary:focus,
 .open>.dropdown-toggle.btn-primary:hover {
     color:#00bac7;
-    background-color:hwb(184deg 4% 65% / 75%);
+    /* background-color:hwb(184deg 4% 65% / 75%); */
 }
 
 .dropdown-menu>li>a {
