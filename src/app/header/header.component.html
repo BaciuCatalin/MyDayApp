@@ -1,9 +1,9 @@
-<nav class="navbar navbar-default navbar-dark bg-dark">
+<nav class="navbar navbar-default navbar-expand-lg">
     <div class="container-fluid">
-        <div class="navbar-header navbar-dark bg-dark">
-            <a href="#" class="navbar-brand">MyDay</a>
-        </div>
-        <div class="collapse navbar-collapse">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand navbar-brand">My<span style="color:#00bac7;">Day</span></a>
+        </div> 
+        <div class="collapse navbar-collapse navbar-custom navbar-dark bd-navbar sticky-top">
             <ul class="nav navbar-nav">
                 <li routerLinkActive="active"><a routerLink="todo">ToDo</a></li>
                 <li routerLinkActive="active"><a routerLink="/recipes">Recipes</a></li>
@@ -13,8 +13,8 @@
                 <li class="dropdown" appDropdown>
                     <a class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li style="cursor: pointer;"><a>Save Data</a></li>
-                        <li style="cursor: pointer;"><a>Fetch Data</a></li>
+                        <li style="cursor: pointer;" (click)="onSaveData()"><a>Save Data</a></li>
+                        <li style="cursor: pointer;" (click)="onFechData()"><a>Fetch Data</a></li>
                     </ul>
                 </li>
 
