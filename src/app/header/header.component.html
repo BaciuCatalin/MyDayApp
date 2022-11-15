@@ -2,11 +2,11 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <a href="#" class="navbar-brand navbar-brand">My<span style="color:#00bac7;">Day</span></a>
-        </div> 
+        </div>
         <div class="collapse navbar-collapse navbar-custom navbar-dark bd-navbar sticky-top">
             <ul class="nav navbar-nav">
-                <li routerLinkActive="active"><a routerLink="todo">ToDo</a></li>
-                <li routerLinkActive="active"><a routerLink="/recipes">Recipes</a></li>
+                <li routerLinkActive="active"><a routerLink="todo" (click)="onFechTask()">ToDo</a></li>
+                <li routerLinkActive="active"><a routerLink="/recipes" (click)="onFechRecipe()">Recipes</a></li>
                 <li routerLinkActive="active"><a routerLink="/shopping-list">Shopping List</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -14,12 +14,10 @@
                     <a class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li style="cursor: pointer;" (click)="onSaveData()"><a>Save Data</a></li>
-                        <li style="cursor: pointer;" (click)="onFechData()"><a>Fetch Data</a></li>
+                        <!-- <li style="cursor: pointer;" (click)="onFechData()"><a>Fetch Data</a></li> -->
                     </ul>
                 </li>
-
             </ul>
         </div>
     </div>
-
 </nav>

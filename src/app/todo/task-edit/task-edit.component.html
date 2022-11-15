@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-xs-12">
+        <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-xs-12">
+                    <button type="submit"
+                     class="btn btn-success" 
+                     [disabled]="!taskForm.valid">Save</button>
+                    <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="text">Text</label>
+                        <input type="text" id="text" formControlName="text" class="form-control" name="text">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="day">Day & Time</label>
+                        <input type="datetime-local" id="day" formControlName="day" class="form-control" name="day">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group form-control-check">
+                        <label for="reminder" class="form-check-label">Set Reminder</label>
+                        <input type="checkbox" name="reminder" class="form-control form-check-input" formControlName="reminder"
+                            id="reminder">
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

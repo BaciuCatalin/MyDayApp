@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-xs 12">
+        <!-- <h1>{{task.text}}</h1> -->
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs 12">
+        <div class="btn-group" appDropdown> 
+            <button type="button" class="btn btn-primary dropdown-toogle"> Manage Task <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a style="cursor:pointer" (click)="onEditTask()">Edit Task</a></li>
+                <li><a style="cursor:pointer" (click)="onDeleteTask()">Delete Task</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- <div class="row">
+    <div class="col-xs-12">
+        reminder
+    </div>
+</div> -->

@@ -4,12 +4,15 @@ import { HttpClient } from '@angular/common/http';
 import { Recipe } from '../recipes/recipes.model';
 import { RecipeService } from '../recipes/recipe.service';
 import { map, tap } from 'rxjs';
+import { TaskService } from '../todo/task.service';
+import { Task } from '../todo/task.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataStorageService {
-  constructor(private hhtp: HttpClient, private recipeService: RecipeService) {}
+  constructor(private hhtp: HttpClient, private recipeService: RecipeService,
+    private tasksService: TaskService) {}
 
   recipeDB() {
     const recipes = this.recipeService.getRecipes();
@@ -19,7 +22,7 @@ export class DataStorageService {
         recipes
       )
       .subscribe((response) => {
-        console.log(recipes);
+        console.log(response);
       });
   }
 
@@ -43,4 +46,19 @@ export class DataStorageService {
       )
       
   }
+
+  storeTask(){
+      const tasks = this.tasksService.getTasks();
+      this.hhtp.put('https://mydayapp-3a97c-default-rtdb.firebaseio.com/tasks.json', tasks).subscribe(response => {
+        console.log(response);        
+      });
+  }
+
+  fechTaskDB(){
+    return this.hhtp.get<Task[]>('https://mydayapp-3a97c-default-rtdb.firebaseio.com/tasks.json').pipe(tap(tasks => {
+      this.tasksService.setTasks(tasks) 
+    }));
+    
+  }
+  
 }
