@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Task } from '../../task.model';
 import { TaskService } from '../../task.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 
@@ -17,14 +17,16 @@ export class TaskItemComponent implements OnInit {
 
 
   constructor( private taskService: TaskService,
-              private router: Router) { }
+              private router: Router,
+              private route: ActivatedRoute,) { }
 
   ngOnInit(): void {
   }
 
   onDeleteTask(){
     this.taskService.deleteTask(this.id);
-    this.router.navigate(['/tasks']);
+    // this.router.navigate(['/todo/']);
+    this.router.navigate(['/todo/'], { relativeTo: this.route } )
   }
 
 }

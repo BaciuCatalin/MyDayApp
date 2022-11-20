@@ -31,7 +31,7 @@ id: number;
 
   onDeleteTask(){
     this.taskService.deleteTask(this.id);
-    this.router.navigate(['/tasks']);
+    this.router.navigate(['/todo/']);
   }
 
 }

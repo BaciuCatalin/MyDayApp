@@ -6,7 +6,7 @@
                     <button type="submit"
                      class="btn btn-success" 
                      [disabled]="!taskForm.valid">Save</button>
-                    <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+                    <button type="button" class="btn btn-success" (click)="onCancel()">Cancel</button>
                 </div>
             </div>
             <div class="row">
@@ -19,7 +19,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <div class="form-group">
+                    <div class="form-group"> 
                         <label for="day">Day & Time</label>
                         <input type="datetime-local" id="day" formControlName="day" class="form-control" name="day">
                     </div>

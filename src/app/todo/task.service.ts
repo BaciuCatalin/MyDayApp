@@ -45,4 +45,8 @@ export class TaskService {
     this.tasks.splice(index, 1);
     this.tasksChanged.next(this.tasks.slice());
   }
+
+  addIngredientsTask() {
+
+  }
 }

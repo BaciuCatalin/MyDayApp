@@ -4,39 +4,36 @@ import { DataStorageService } from '../shared/data-storage.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
-
 export class HeaderComponent {
-  constructor(private dataStorageService: DataStorageService) {
-  }
+  constructor(private dataStorageService: DataStorageService) {}
 
-  ngOnInit(): void {
-  }
-   
-  onFechRecipe(){
-    this.dataStorageService.fetchRecipeDB().subscribe() 
-  }
+  ngOnInit(): void {}
 
-  onFechTask(){
-    this.dataStorageService.fechTaskDB().subscribe();
-  }
+  // onFechRecipe(){
+  //   this.dataStorageService.fetchRecipeDB().subscribe()
+  // }
 
-  onSaveData(){
+  // onFechTask(){
+  //   this.dataStorageService.fechTaskDB().subscribe();
+  // }
+
+  onSaveData() {
     this.dataStorageService.recipeDB();
     this.dataStorageService.storeTask();
   }
 
-    // onSaveRecipe(){
+  // onSaveRecipe() {
   //   this.dataStorageService.recipeDB();
   // }
-  
-  // onSaveTask(){
+
+  // onSaveTask() {
   //   this.dataStorageService.storeTask();
   // }
 
-  // onFechData(){
-  //   this.dataStorageService.fetchRecipeDB().subscribe();
-  //   this.dataStorageService.fechTaskDB().subscribe();
-  // }
+  onFechData() {
+    this.dataStorageService.fetchRecipeDB().subscribe();
+    this.dataStorageService.fechTaskDB().subscribe();
+  }
 }

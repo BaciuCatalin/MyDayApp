@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <button type="submit" class="btn btn-success" [disabled]="!recipeForm.valid">Save</button>
-                    <button type="button" (click)="onCancel()" class="btn btn-danger">Cancel</button>
+                    <button type="button" (click)="onCancel()" class="btn btn-success">Cancel</button>
                 </div>
             </div>
             <div class="row">
@@ -48,7 +48,7 @@
                             <input type="number" formControlName="amount" class="form-control">
                         </div>
                         <div class="col-xs 2">
-                            <button class="btn btn-danger" (click)="onDeleteIngredient(i)">X</button>
+                            <button class="btn btn-success" (click)="onDeleteIngredient(i)">X</button>
                         </div>
                     </div>
                     <hr>

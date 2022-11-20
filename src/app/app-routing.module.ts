@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
@@ -13,7 +13,7 @@ import { TaskDetailComponent } from './todo/task-detail/task-detail.component';
 import { TasksResolverService } from './todo/tasks-resolver.service';
 
 const routes: Routes = [
-  { path:'', redirectTo: '/todo', pathMatch: 'full' },
+  { path:'', redirectTo: '/todo', pathMatch: 'full'},
   { path:'recipes', component: RecipesComponent, children: [
     { path: '', component: RecipesStartComponent },
     { path: 'new', component: RecipeEditComponent},
