@@ -24,7 +24,7 @@ export class TaskService {
   }
 
   getTasks() {
-    return this.tasks.slice();
+    return this.tasks;
   }
 
   getTask(index: number) {
@@ -44,9 +44,5 @@ export class TaskService {
   deleteTask(index: number){
     this.tasks.splice(index, 1);
     this.tasksChanged.next(this.tasks.slice());
-  }
-
-  addIngredientsTask() {
-
   }
 }

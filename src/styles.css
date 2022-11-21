@@ -9,7 +9,7 @@ background-color: #f8fafb;
     margin-right: 5px;
 }
 
-.btn:hover, .btn:active, .btn:default, .btn:checked{
+.btn:hover, .btn::selection, .btn:default, .btn:checked{
     color: #00bac7;
     background-color: #0e2238;
 
