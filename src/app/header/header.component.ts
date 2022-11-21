@@ -22,6 +22,8 @@ export class HeaderComponent {
   onSaveData() {
     this.dataStorageService.recipeDB();
     this.dataStorageService.storeTask();
+    this.dataStorageService.storeIngredients();
+    
   }
 
   // onSaveRecipe() {
@@ -35,5 +37,6 @@ export class HeaderComponent {
   onFechData() {
     this.dataStorageService.fetchRecipeDB().subscribe();
     this.dataStorageService.fechTaskDB().subscribe();
+    this.dataStorageService.fechIngredientsDB().subscribe();
   }
 }

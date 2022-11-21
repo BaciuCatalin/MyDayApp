@@ -3,8 +3,6 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { TaskService } from '../task.service';
 
-
-
 @Component({
   selector: 'app-task-edit',
   templateUrl: './task-edit.component.html',
@@ -28,7 +26,6 @@ export class TaskEditComponent implements OnInit {
       this.editMode = params['id'] != null;
       this.initForm();
     });
-    console.log(this.taskForm);
   }
 
   private initForm() {
@@ -51,7 +48,7 @@ export class TaskEditComponent implements OnInit {
   }
 
   onSubmit() {
-    // const newTask = new Task(
+    //   const newTask = new Task(
     //   this.taskForm.value['text'],
     //   this.taskForm.value['day'],
     //   this.taskForm.value['reminder']);

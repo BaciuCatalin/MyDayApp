@@ -65,6 +65,25 @@ export class RecipeService {
     this.recipesChanged.next(this.recipes.slice());
   }
 
+  // addRecipe(recipe: Recipe) {
+  //   this.recipes.push(recipe);
+  //   this.recipesChanged.next(this.recipes.slice());
+  //   this.http
+  //   .post(
+  //     'https://mydayapp-3a97c-default-rtdb.firebaseio.com/recipes.json',
+  //     this.recipes
+  //   )
+  //   .subscribe((response) => {
+  //     console.log(response);
+  //   });
+  //   this.recipesChanged.next(this.recipes.slice());
+  // }
+
+  // recipeDB() {
+  //   const recipes = this.recipeService.getRecipes();
+   
+  // }
+
   updateRecipe(index: number, newRecipe: Recipe) {
     this.recipes[index] = newRecipe;
     this.recipesChanged.next(this.recipes.slice());

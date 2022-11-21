@@ -1,16 +1,16 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"); */
 
-/* * {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-} */
+} 
 
-/* body {
+#toDoBody {
   font-family: "Poppins", sans-serif;
-} */
+}
 
-/* h1 {
+ h1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -56,4 +56,5 @@
 .form-control-check input {
   flex: 2;
   height: 20px;
-} */
+} 
+

@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { DataStorageService } from '../shared/data-storage.service';
 import { Ingredient } from '../shared/ingredients.model';
 import { ShoppingListService } from './shopping-list.service';
 @Component({
@@ -11,15 +12,22 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
   ingredients: Ingredient[];
   private subscription: Subscription;
 
-  constructor(private shoppingListService: ShoppingListService) { }
+
+  constructor(private shoppingListService: ShoppingListService,
+              private dataStorageService: DataStorageService) { }
 
   ngOnInit() {
-    this.ingredients = this.shoppingListService.getIndredients();
+    this.ingredients = this.shoppingListService.getIngredients();
     this.subscription = this.shoppingListService.ingredientsChanged.subscribe(
       (ingredients: Ingredient[]) => {
         this.ingredients = ingredients;
-      } 
-    )
+   
+        // this.ingredients.forEach(ingredient => {
+        //   return localStorage.setItem('([this.ingredient.name]', (this.ingredients));
+        //   //     this.ingredientSL+=ingredient.name + ': '+ ingredient.amount
+    
+           })
+ 
   }
 
   onEditItem(index:number){
@@ -29,5 +37,8 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
-  onAddToTask(){}
+
+onSaveIngredients(){
+  // this.dataStorageService.storeIngredients();
+}
 }
