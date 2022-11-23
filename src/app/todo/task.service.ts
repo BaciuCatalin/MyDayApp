@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
-
+import { HttpClient } from '@angular/common/http';
+import { Injectable, OnInit } from '@angular/core';
+import { Subject, tap } from 'rxjs';
 import { Task } from './task.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class TaskService {
+export class TaskService implements OnInit {
   tasksChanged = new Subject<Task[]>();
 
   // private tasks: Task[] = [
@@ -16,9 +16,12 @@ export class TaskService {
   // ];
 
   private tasks: Task[] = [];
-  constructor() {}
+  constructor(private http: HttpClient) {}
+  ngOnInit(): void {
+    this.fechTask();
+  }
 
-  setTasks( tasks: Task[]){
+  setTasks(tasks: Task[]) {
     this.tasks = tasks;
     this.tasksChanged.next(this.tasks);
   }
@@ -34,15 +37,46 @@ export class TaskService {
   addTask(task: Task) {
     this.tasks.push(task);
     this.tasksChanged.next(this.tasks.slice());
+    this.storeTask();
+    this.fechTask();
   }
 
   updateTask(index: number, newTask: Task) {
     this.tasks[index] = newTask;
     this.tasksChanged.next(this.tasks.slice());
+    this.storeTask();
+    this.fechTask();
   }
 
-  deleteTask(index: number){
+  deleteTask(index: number) {
     this.tasks.splice(index, 1);
     this.tasksChanged.next(this.tasks.slice());
+    this.storeTask();
+    this.fechTask();
+  }
+
+  fechTask() {
+    return this.http
+      .get<Task[]>(
+        'https://mydayapp-3a97c-default-rtdb.firebaseio.com/tasks.json'
+      )
+      .pipe(
+        tap((tasks) => {
+          this.setTasks(tasks);
+        })
+      );
+  }
+
+  storeTask() {
+    const tasks = this.getTasks();
+    this.http
+      .put(
+        'https://mydayapp-3a97c-default-rtdb.firebaseio.com/tasks.json',
+        tasks
+      )
+      .subscribe((response) => {
+        this.fechTask();
+        console.log(response);
+      });
   }
 }

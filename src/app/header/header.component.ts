@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { DataStorageService } from '../shared/data-storage.service';
+import { RecipeService } from '../recipes/recipe.service';
+import { ShoppingListService } from '../shopping-list/shopping-list.service';
+import { TaskService } from '../todo/task.service';
 
 @Component({
   selector: 'app-header',
@@ -7,36 +9,41 @@ import { DataStorageService } from '../shared/data-storage.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  constructor(private dataStorageService: DataStorageService) {}
+  constructor(private shoppingListService: ShoppingListService,
+              private recipeService: RecipeService,
+              private taskService: TaskService) {}
 
   ngOnInit(): void {}
 
-  // onFechRecipe(){
-  //   this.dataStorageService.fetchRecipeDB().subscribe()
-  // }
-
-  // onFechTask(){
-  //   this.dataStorageService.fechTaskDB().subscribe();
-  // }
-
-  onSaveData() {
-    this.dataStorageService.recipeDB();
-    this.dataStorageService.storeTask();
-    this.dataStorageService.storeIngredients();
-    
+  onFechRecipe(){
+    this.recipeService.fetchRecipe().subscribe()
   }
 
-  // onSaveRecipe() {
+  onFechTask(){
+    this.taskService.fechTask().subscribe();
+  }
+
+  onFechSL(){
+    this.shoppingListService.fechIngredients().subscribe();
+  }
+
+
+
+
+
+
+  // onSaveData() {
   //   this.dataStorageService.recipeDB();
-  // }
-
-  // onSaveTask() {
   //   this.dataStorageService.storeTask();
+  //   this.dataStorageService.storeIngredients();
+    
   // }
 
-  onFechData() {
-    this.dataStorageService.fetchRecipeDB().subscribe();
-    this.dataStorageService.fechTaskDB().subscribe();
-    this.dataStorageService.fechIngredientsDB().subscribe();
-  }
+  // onFechData() {
+  //   this.dataStorageService.fetchRecipeDB().subscribe();
+  //   this.dataStorageService.fechTaskDB().subscribe();
+  //   this.shoppingListService.fechIngredients().subscribe();
+  // }
+
+ 
 }

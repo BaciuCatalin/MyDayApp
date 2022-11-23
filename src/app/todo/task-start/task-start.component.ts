@@ -10,6 +10,6 @@ export class TaskStartComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
+     }
 
 }

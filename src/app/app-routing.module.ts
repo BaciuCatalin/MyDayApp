@@ -13,25 +13,48 @@ import { TaskDetailComponent } from './todo/task-detail/task-detail.component';
 import { TasksResolverService } from './todo/tasks-resolver.service';
 
 const routes: Routes = [
-  { path:'', redirectTo: '/todo', pathMatch: 'full'},
-  { path:'recipes', component: RecipesComponent, children: [
-    { path: '', component: RecipesStartComponent },
-    { path: 'new', component: RecipeEditComponent},
-    { path: ':id', component: RecipeDetailComponent, resolve: [RecipesResolveService] },
-    { path: ':id/edit', component: RecipeEditComponent, resolve: [RecipesResolveService] }
-  ] },
-  { path:'shopping-list', component: ShoppingListComponent },
-  { path:'todo', component: TodoComponent, children:[
-    { path: '', component: TaskStartComponent},
-    { path: 'new', component: TaskEditComponent},
-    { path: ':id', component: TaskDetailComponent, resolve: [TasksResolverService]},
-    { path: ':id/edit', component: TaskEditComponent, resolve: [TasksResolverService] }
-   
-  ] }
+  { path: '', redirectTo: '/todo', pathMatch: 'full' },
+  {
+    path: 'recipes',
+    component: RecipesComponent,
+    children: [
+      { path: '', component: RecipesStartComponent },
+      { path: 'new', component: RecipeEditComponent },
+      {
+        path: ':id',
+        component: RecipeDetailComponent,
+        resolve: [RecipesResolveService],
+      },
+      {
+        path: ':id/edit',
+        component: RecipeEditComponent,
+        resolve: [RecipesResolveService],
+      },
+    ],
+  },
+  { path: 'shopping-list', component: ShoppingListComponent },
+  {
+    path: 'todo',
+    component: TodoComponent,
+    children: [
+      { path: '', component: TaskStartComponent },
+      { path: 'new', component: TaskEditComponent },
+      {
+        path: ':id',
+        component: TaskDetailComponent,
+        resolve: [TasksResolverService],
+      },
+      {
+        path: ':id/edit',
+        component: TaskEditComponent,
+        resolve: [TasksResolverService],
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

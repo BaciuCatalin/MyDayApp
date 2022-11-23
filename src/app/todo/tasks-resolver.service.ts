@@ -1,12 +1,17 @@
-import { Injectable } from "@angular/core";
-import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from "@angular/router";
+import { Injectable } from '@angular/core';
+import {
+  ActivatedRouteSnapshot,
+  Resolve,
+  RouterStateSnapshot,
+} from '@angular/router';
+import { Task } from './task.model';
+import { TaskService } from './task.service';
 
-import { Task } from "./task.model";
-import { DataStorageService } from "../shared/data-storage.service";
-@Injectable({providedIn:'root'})
-export class TasksResolverService implements Resolve<Task[]>{
-    constructor(private dataStorageService: DataStorageService ){}
-    resolve ( route: ActivatedRouteSnapshot, state: RouterStateSnapshot){
-        return this.dataStorageService.fechTaskDB();
-    }
+@Injectable({ providedIn: 'root' })
+export class TasksResolverService implements Resolve<Task[]> {
+  constructor(private taskService: TaskService) {}
+
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    return this.taskService.fechTask();
+  }
 }

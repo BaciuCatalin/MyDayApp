@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { TaskService } from '../task.service';
+import { Task } from '../task.model';
 
 @Component({
   selector: 'app-task-edit',
@@ -20,7 +21,7 @@ export class TaskEditComponent implements OnInit {
     private router: Router,    
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       this.id = +params['id'];
       this.editMode = params['id'] != null;
@@ -34,28 +35,28 @@ export class TaskEditComponent implements OnInit {
     let taskReminder = false;
 
     if (this.editMode) {
-      const task = this.taskService.getTask(this.index);
+      const task = this.taskService.getTask(this.id);
       taskText = task.text;
       taskDay = task.day;
       taskReminder = task.reminder;
     }
 
     this.taskForm = new FormGroup({
-      'text': new FormControl(taskText, Validators.required),
-      'day': new FormControl(taskDay, Validators.required),
-      'reminder': new FormControl(taskReminder, Validators.required),
+      text: new FormControl(taskText, Validators.required),
+      day: new FormControl(taskDay, Validators.required),
+      reminder: new FormControl(taskReminder, Validators.required),
     });
   }
 
   onSubmit() {
-    //   const newTask = new Task(
-    //   this.taskForm.value['text'],
-    //   this.taskForm.value['day'],
-    //   this.taskForm.value['reminder']);
+      const newTask = new Task(
+      this.taskForm.value['text'],
+      this.taskForm.value['day'],
+      this.taskForm.value['reminder']);
       if (this.editMode) {
-      this.taskService.updateTask(this.id, this.taskForm.value);
+      this.taskService.updateTask(this.id, newTask);
     } else {
-      this.taskService.addTask(this.taskForm.value);
+      this.taskService.addTask(newTask);
     }
     this.onCancel();
   }
