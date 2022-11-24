@@ -18,14 +18,15 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
+    
+
+    this.shoppingListService.fechIngredients().subscribe();
+
+
     this.ingredients = this.shoppingListService.getIngredients();
     this.subscription = this.shoppingListService.ingredientsChanged.subscribe(
       (ingredients: Ingredient[]) => {
         this.ingredients = ingredients;
-
-        // this.ingredients.forEach(ingredient => {
-        //   return localStorage.setItem('([this.ingredient.name]', (this.ingredients));
-        //   //     this.ingredientSL+=ingredient.name + ': '+ ingredient.amount
       }
     );
   }
@@ -36,9 +37,5 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
-  }
-
-  onSaveIngredients(){
-    // this.dataStorageService.storeIngredients();
   }
 }

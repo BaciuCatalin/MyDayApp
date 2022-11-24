@@ -31,7 +31,7 @@ export class TaskService implements OnInit {
   }
 
   getTask(index: number) {
-    return this.getTasks[index];
+    return this.tasks[index];
   }
 
   addTask(task: Task) {

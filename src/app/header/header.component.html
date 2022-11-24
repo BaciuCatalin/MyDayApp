@@ -1,27 +1,14 @@
 <nav class="navbar navbar-default navbar-expand-lg">
     <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        <div class="navbar-header collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a href="#" class="navbar-brand">My<span style="color:#00bac7;">Day</span></a>
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand navbar-brand">My<span style="color:#00bac7;">Day</span></a>
         </div>
-        <!-- navbar-custom navbar-dark bd-navbar sticky-top -->
-        <div>
-            <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item" routerLinkActive="active"><a class="nav-link active" routerLink="todo" (click)="onFechTask()">ToDo</a></li>
-                <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/recipes" (click)="onFechRecipe()">Recipes</a></li>
-                <li class="nav-item" routerLinkActive="active"><a class="nav-link disabled" routerLink="/shopping-list" (click)="onFechSL()">Shopping List</a></li>
+        <div class="collapse navbar-collapse navbar-custom navbar-dark bd-navbar sticky-top">
+            <ul class="nav navbar-nav">
+                <li routerLinkActive="active"><a routerLink="/todo">ToDo</a></li>
+                <li routerLinkActive="active"><a routerLink="/recipes">Recipes</a></li>
+                <li routerLinkActive="active"><a routerLink="/shopping-list">Shopping List</a></li>
             </ul>
-            <!-- <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown" appDropdown>
-                    <a class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li style="cursor: pointer;" (click)="onSaveData()"><a>Save Data</a></li>
-                        <li style="cursor: pointer;" (click)="onFechData()"><a>Fetch Data</a></li>
-                    </ul>
-                </li>
-            </ul> -->
         </div>
     </div>
 </nav>

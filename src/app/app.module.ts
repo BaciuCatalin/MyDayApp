@@ -23,7 +23,7 @@ import { TaskListComponent } from './todo/task-list/task-list.component';
 import { TaskItemComponent } from './todo/task-list/task-item/task-item.component';
 import { TaskStartComponent } from './todo/task-start/task-start.component';
 import { TaskService } from './todo/task.service';
-import { MyappStartComponent } from './myapp-start/myapp-start.component';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +44,6 @@ import { MyappStartComponent } from './myapp-start/myapp-start.component';
    TaskListComponent,
    TaskItemComponent,
    TaskStartComponent,
-   MyappStartComponent,
    ],
   imports: [
     BrowserModule, HttpClientModule,

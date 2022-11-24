@@ -1,5 +1,7 @@
 .navbar {
     background-color: #0e2238;
+    border-color: #0e2238;
+    border-radius: none;
 }
 
 .navbar-brand {
@@ -14,6 +16,11 @@
 .navbar-custom :hover {
     color:#00bac7 ;
     font-weight: 500;
+}
+
+.navbar-default{
+    background-color: #0e2238;
+    color: #9ea9b4;
 }
 
 .navbar-default .navbar-nav>.active>a {
@@ -31,7 +38,6 @@ ul.dropdown-menu :hover {
     background-color: hwb(184deg 4% 65% / 75%);
 }
 
-
 .dropdown-menu {
     background-color:#0e2238;
 }
@@ -40,3 +46,19 @@ ul.dropdown-menu :hover {
     color: #9ea9b4;
 }
 
+
+.list-group-item.active .list-group-item-text{
+    color: #9ea9b4;
+}
+
+.svgButton{
+    background-color: #0e2238;
+    border: 1px solid #00bac7;
+    border-radius: 5px;
+    color: #00bac7;
+}
+
+.svgButton:hover{
+    background-color: #00bac7;
+    color: #0e2238;
+}

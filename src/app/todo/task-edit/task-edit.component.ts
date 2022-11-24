@@ -18,7 +18,7 @@ export class TaskEditComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private taskService: TaskService,
-    private router: Router,    
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -49,11 +49,12 @@ export class TaskEditComponent implements OnInit {
   }
 
   onSubmit() {
-      const newTask = new Task(
+    const newTask = new Task(
       this.taskForm.value['text'],
       this.taskForm.value['day'],
-      this.taskForm.value['reminder']);
-      if (this.editMode) {
+      this.taskForm.value['reminder']
+    );
+    if (this.editMode) {
       this.taskService.updateTask(this.id, newTask);
     } else {
       this.taskService.addTask(newTask);
