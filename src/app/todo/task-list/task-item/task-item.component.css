@@ -1,18 +1,13 @@
-.task {
-    background: #f4f4f4;
-    margin: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .task.reminder {
-    border-left: 5px solid green;
-  }
-  
-  .task h3 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  a.list-group-item:hover {
+    background-color: hwb(184deg 4% 65% / 75%);
+}
 
+a.list-group-item.active,
+ .list-group-item.active:focus,
+ .list-group-item.active:hover {
+    z-index: 2;
+    color: #00bac7;
+    background-color:hwb(184deg 4% 65% / 75%);
+    border-color: hwb(184deg 4% 65% / 75%);
+}
   

@@ -17,7 +17,6 @@ export class TaskItemComponent implements OnInit {
   id: number;
   ingredients: Ingredient[];
   title: string = 'Shopphing List Task';
-  // ingredientSL = '';
     private subscription: Subscription;
 
   constructor(
@@ -28,15 +27,8 @@ export class TaskItemComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.ingredients = this.shoppingListService.getIngredients();
-    this.subscription = this.shoppingListService.ingredientsChanged.subscribe(
-    //   (ingredients: Ingredient[]) => {
-    //     this.ingredients = ingredients;
-    //     this.ingredients.forEach((ingredient) => {
-    //       this.ingredientSL += ingredient.name + ': ' + ingredient.amount;
-    //     });
-    //   }
-    );
+    // this.ingredients = this.shoppingListService.getIngredients();
+    // this.subscription = this.shoppingListService.ingredientsChanged.subscribe();
   }
 
   onDeleteTask() {

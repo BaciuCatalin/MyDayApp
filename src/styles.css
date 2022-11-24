@@ -1,6 +1,6 @@
 body {
 background-color: hwb(184deg 4% 65% / 75%);
-color: #9ea9b4;
+color:#9ea9b4;
 }
 
 .btn{
@@ -44,5 +44,9 @@ ul.dropdown-menu {
 }
 .dropdown-menu>li>a:hover {
     color:#00bac7;
+}
+
+hr{
+    border: hwb(184deg 4% 65% / 75%);
 }
 

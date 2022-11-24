@@ -33,24 +33,21 @@ export class TaskListComponent implements OnInit {
 
   ngOnInit(): void {
     this.taskService.fechTask().subscribe();
-   
+
     this.taskService.tasksChanged.subscribe((tasks: Task[]) => {
       this.tasks = tasks;
     });
     this.tasks = this.taskService.getTasks();
     this.shoppingListService.fechIngredients().subscribe();
-
     this.ingredients = this.shoppingListService.getIngredients();
     this.subscription = this.shoppingListService.ingredientsChanged.subscribe(
       (ingredients: Ingredient[]) => {
         this.ingredients = ingredients;
 
-
-
         this.ingredients.forEach((ingredient, index) => {
           this.ingredientSL += ingredient.name + ': ' + ingredient.amount;
-          if(index < this.ingredients.length - 1){
-            this.ingredientSL += ', ' ;
+          if (index < this.ingredients.length - 1) {
+            this.ingredientSL += ', ';
           }
         });
       }
