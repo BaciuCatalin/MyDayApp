@@ -33,7 +33,6 @@ export class TaskListComponent implements OnInit {
 
   ngOnInit(): void {
     this.taskService.fechTask().subscribe();
-
     this.taskService.tasksChanged.subscribe((tasks: Task[]) => {
       this.tasks = tasks;
     });
