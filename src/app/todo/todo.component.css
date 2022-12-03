@@ -1,60 +1,49 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-} 
+}
 
-#toDoBody {
+.body {
   font-family: "Poppins", sans-serif;
 }
 
- h1 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 20px;
+h1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+  color:#00bac7;
 }
 
 .container {
-  max-width: 500px;
+  max-width: 800px;
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
+  border: 3px solid hwb(184deg 4% 65%);
   padding: 30px;
-  border-radius: 5px;
+  border-radius: 25px;
 }
 
-.form-control {
-  margin: 20px 0;
-}
-
-.form-control label {
-  display: block;
-}
-
-.form-control input {
-  width: 100%;
-  height: 40px;
-  margin: 5px;
-  padding: 3px 7px;
-  font-size: 17px;
-}
-
-.form-control-check {
-  display: flex;
+.task {
+  margin: 0px 25px 25px 25px;
+  overflow: auto;
+  padding: 20px;
+  border-radius: 0px 35px 35px 35px;
   align-items: center;
-  justify-content: space-between;
+  background-color: hwb(184deg 4% 65%);
 }
 
-.form-control-check label {
-  flex: 1;
+.task-header {
+  border-radius: 35px 35px 35px 0px;
+  height: 151px auto;
+  background-color:  hwb(184deg 4% 65%);
+   border: 3px solid hwb(184deg 4% 65%) ;
+  
 }
 
-.form-control-check input {
-  flex: 2;
-  height: 20px;
-} 
- */
+.thisDay {
+  color: #fff;
+  font-size: 35px;
+}

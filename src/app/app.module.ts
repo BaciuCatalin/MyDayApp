@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
@@ -23,6 +22,7 @@ import { TaskListComponent } from './todo/task-list/task-list.component';
 import { TaskItemComponent } from './todo/task-list/task-item/task-item.component';
 import { TaskStartComponent } from './todo/task-start/task-start.component';
 import { TaskService } from './todo/task.service';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -46,8 +46,8 @@ import { TaskService } from './todo/task.service';
    TaskStartComponent,
    ],
   imports: [
-    BrowserModule, HttpClientModule,
-    AppRoutingModule, FormsModule, ReactiveFormsModule
+    HttpClientModule,
+    AppRoutingModule, FormsModule, ReactiveFormsModule, BrowserModule
   ],
   providers: [ShoppingListService, RecipeService, TaskService],
   bootstrap: [AppComponent]

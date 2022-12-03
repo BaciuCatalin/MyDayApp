@@ -37,3 +37,4 @@ export class TaskItemComponent implements OnInit {
     this.router.navigate(['/todo/'], { relativeTo: this.route });
   }
 }
+

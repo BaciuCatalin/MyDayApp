@@ -16,3 +16,12 @@ a.active, a:focus, a:hover{
     color: #00bac7;
 }
 
+
+
+.card{
+    border: 1px solid red;
+    border-radius: 25px;
+    padding: 35px;
+    margin: 30px;
+}
+

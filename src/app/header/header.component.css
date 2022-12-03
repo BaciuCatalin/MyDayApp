@@ -10,7 +10,7 @@
 }
 
 .navbar-custom {
-    color:#9ea9b4;
+    color:#fff;
 }
 
 .navbar-custom :hover {
@@ -20,7 +20,7 @@
 
 .navbar-default{
     background-color: #0e2238;
-    color: #9ea9b4;
+    color: #fff;
 }
 
 .navbar-default .navbar-nav>.active>a {
@@ -30,7 +30,7 @@
 
 .navbar-default .navbar-nav>.open>a, 
 .navbar-default .navbar-nav>.open>a:focus {
-    color:#00bac7;
+    color:#fff;
     background-color:#0e2238;
 }
 
@@ -43,12 +43,12 @@ ul.dropdown-menu :hover {
 }
 
 .dropdown-menu a {
-    color: #9ea9b4;
+    color: #fff;
 }
 
 
 .list-group-item.active .list-group-item-text{
-    color: #9ea9b4;
+    color: #fff;
 }
 
 .svgButton{

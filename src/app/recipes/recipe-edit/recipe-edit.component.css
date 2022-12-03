@@ -2,3 +2,9 @@ input.ng-invalid.ng-touched,
 textarea.ng-invalid.ng-touched {
     border: 1px solid red;
 }
+
+.card{
+    border: 1px solid red;
+    border-radius: 25px;
+    padding: 35px;
+}

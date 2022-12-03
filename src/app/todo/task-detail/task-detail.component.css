@@ -1,6 +1,6 @@
 button.btn.btn-primary.dropdown-toggle {
   background-color: #0e2238;
-  color: #9ea9b4;
+  color: #fff;
   border-color: #0e2238;
 }
 
@@ -24,7 +24,7 @@ ul.dropdown-menu {
 }
 
 .dropdown-menu > li > a {
-  color: #9ea9b4;
+  color: #fff;
 }
 .dropdown-menu > li > a:hover {
   color: #00bac7;

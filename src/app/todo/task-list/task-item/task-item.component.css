@@ -1,13 +1,45 @@
-  a.list-group-item:hover {
-    background-color: hwb(184deg 4% 65% / 75%);
+a.list-group-item:hover,
+.list-group-item:focus {
+  background-color: hwb(184deg 4% 65% / 9%);
+  color: white;
 }
 
 a.list-group-item.active,
- .list-group-item.active:focus,
- .list-group-item.active:hover {
-    z-index: 2;
-    color: #00bac7;
-    background-color:hwb(184deg 4% 65% / 75%);
-    border-color: hwb(184deg 4% 65% / 75%);
+.list-group-item.active:focus,
+.list-group-item.active:hover {
+  z-index: 0;
+  background-color: hwb(184deg 4% 65% / 9%);
+  border-color: white;
 }
-  
+
+.time {
+  background-color: #333;
+  color: white;
+  margin-bottom: -45px;
+  margin-right: -35px;
+  border: 1px solid  #333;
+  border-radius: 15px 0 15px 0;
+}
+
+.task-card{
+  border-radius: 10px;
+  padding-bottom: 35px;
+}
+
+.text {
+  position: relative;
+  margin-bottom: 5px;
+} 
+
+h4:hover, span:hover{
+  color: #00bac7;
+}
+
+.task-card h4:hover,
+.task-card h4:focus{
+  color: #00bac7;
+}
+
+
+
+

@@ -27,6 +27,7 @@ export class TaskEditComponent implements OnInit {
       this.editMode = params['id'] != null;
       this.initForm();
     });
+    // let display = document.querySelector('.display');
   }
 
   private initForm() {

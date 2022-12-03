@@ -15,13 +15,9 @@ export class ShoppingListService implements OnInit {
     // new Ingredient ('apple', 3)
   ];
 
-  constructor(
-    private http: HttpClient,
-  ) 
-  {}
+  constructor(private http: HttpClient) {}
   ngOnInit(): void {
-    // this.onFechData();
-    this.fechIngredients();
+      this.fechIngredients();
   }
 
   getIngredients() {
@@ -33,8 +29,11 @@ export class ShoppingListService implements OnInit {
   }
 
   addIngredient(ingredient: Ingredient) {
+
     this.ingredients.push(ingredient);
+
     this.ingredientsChanged.next(this.ingredients.slice());
+
     this.storeIngredients();
     this.fechIngredients();
   }
