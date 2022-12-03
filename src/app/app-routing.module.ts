@@ -37,7 +37,7 @@ const routes: Routes = [
     path: 'todo',
     component: TodoComponent,
     children: [
-      { path: '', component: TaskStartComponent },
+      // { path: '', component: TaskStartComponent },
       { path: 'new', component: TaskEditComponent },
       {
         path: ':id',

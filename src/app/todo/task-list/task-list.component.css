@@ -1,18 +1,30 @@
-.btn-success{
-    background-color: #0e2238;
-    border: #0e2238;
-    color: #9ea9b4;
+.btn-success {
+  background-color: #0e2238;
+  border: #0e2238;
+  color: #9ea9b4;
 }
 
-.btn-success:hover{
-    color: #00bac7;
+.btn-success:hover {
+  color: #00bac7;
 }
 
-.shopping-list:focus, .shopping-list:hover {
-    z-index: 2;
-    color: #00bac7;
-    background-color:hwb(184deg 4% 65% / 75%);
-    border-color: hwb(184deg 4% 65% / 75%);
-
+.shopping-list:focus,
+.shopping-list:hover {
+  z-index: 2;
+  color: #00bac7;
+  background-color: hwb(184deg 4% 65% / 75%);
+  border-color: white;
 }
 
+/* .card {
+  border-radius: 15px;
+  padding: 20px;
+} */
+
+/* .time {
+  background-color: black;
+  color: white;
+  margin-bottom: -55px;
+  margin-right: -55px;
+  border: 1px solid black;
+} */
